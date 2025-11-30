@@ -5,20 +5,11 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.2.1/aframe/build/aframe-ar.js"></script>
   </head>
+
   <body style="margin: 0; overflow: hidden;">
     <a-scene embedded arjs>
-      <!-- マーカーの定義 -->
-      <a-marker type="pattern" url="pattern-Image.patt">
-        <!-- 3D動物モデル -->
-        <a-entity 
-          gltf-model="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models/2.0/Fox/glTF/Fox.gltf"
-          scale="0.05 0.05 0.05"
-          rotation="0 180 0"
-          animation-mixer>
-        </a-entity>
-      </a-marker>
-
-       <!-- ① HIRO マーカー：トナカイ -->
+      
+      <!-- ① HIRO マーカー：トナカイ -->
       <a-marker preset="hiro">
         <a-entity
           gltf-model="https://rawcdn.githack.com/KhronosGroup/glTF-Sample-Models/master/2.0/Reindeer/glTF/Reindeer.gltf"
@@ -28,13 +19,19 @@
         </a-entity>
       </a-marker>
 
+      <!-- ② KANJI マーカー：キツネ -->
+      <a-marker preset="kanji">
+        <a-entity
+          gltf-model="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models/2.0/Fox/glTF/Fox.gltf"
+          scale="0.05 0.05 0.05"
+          rotation="0 180 0"
+          animation-mixer>
+        </a-entity>
+      </a-marker>
+
+      <!-- カメラ -->
       <a-entity camera></a-entity>
+
     </a-scene>
   </body>
 </html>
-
-
-
-
-
-
